@@ -1,0 +1,32 @@
+.column-text {
+    font-family: "Times New Roman";
+    font-size: 16px;
+    height: 18rem;
+    width: 100%;
+    line-height: 22px;
+    overflow: hidden;
+}
+
+.column-text p {
+    margin: 0 0 25px 0;
+}
+
+.column-text-wrap {
+    width: 32%;
+    position: relative;
+    box-sizing: border-box;
+    padding-right: 3.2%;
+}
+
+.column-text-wrap-1,
+.column-text-wrap-2 {
+    padding-right: 10%;
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    right: -100%;
+    top: -18rem;
+}
+
+.column-text-wrap-2 {
+}
