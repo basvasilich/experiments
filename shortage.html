@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Column-experiment</title>
+    <meta name="description" content=""/>
+    <style type="text/css">
+        .long-name {
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .long-name-wrapper {
+            display: inline-block;
+            overflow: hidden;
+            max-width: 90%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding-right: 6.25em;
+            box-sizing: border-box;
+        }
+
+        .long-name-helper {
+            position: absolute;
+            right: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            text-align: right;
+            width: 6.25em;
+            background-color: #fff;
+        }
+
+        .long-name-helper-i {
+            float: right;
+        }
+    </style>
+
+</head>
+<body>
+<h1>Long name shortage</h1>
+
+<span class="long-name">какой чудесный день для того чтобы сделать что-то отвратительное.jpg</span>
+<script>
+    var control = document.querySelector(".long-name")
+    var str = control.innerHTML
+    control.innerHTML = '' +
+            '<span class="long-name-wrapper">' +
+            str.slice(0, str.length - 15) +
+            '</span>' +
+            '<span class="long-name-helper">\n' +
+            '<span class="long-name-helper-i">' +
+            str.slice(-15) +
+            '</span>\n' +
+            '</span>'
+</script>
+</body>
+</html>
