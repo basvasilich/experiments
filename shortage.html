@@ -7,6 +7,8 @@
     <meta name="description" content=""/>
     <style type="text/css">
         .long-name {
+            font-family: "Times New Roman";
+            font-size: 16px;
             white-space: nowrap;
             position: relative;
         }
@@ -14,10 +16,10 @@
         .long-name-wrapper {
             display: inline-block;
             overflow: hidden;
-            max-width: 90%;
+            max-width: 100%;
             text-overflow: ellipsis;
             white-space: nowrap;
-            padding-right: 6.25em;
+            padding-right: 5.88em;
             box-sizing: border-box;
         }
 
@@ -27,12 +29,13 @@
             overflow: hidden;
             white-space: nowrap;
             text-align: right;
-            width: 6.25em;
-            background-color: #fff;
+            width: 5.88em;
+            display: inline-block;
         }
 
         .long-name-helper-i {
             float: right;
+            display: inline-block;
         }
     </style>
 
@@ -40,7 +43,7 @@
 <body>
 <h1>Long name shortage</h1>
 
-<span class="long-name">какой чудесный день для того чтобы сделать что-то отвратительное.jpg</span>
+<span class="long-name">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horriblevermin.jpg</span>
 <script>
     var control = document.querySelector(".long-name")
     var str = control.innerHTML
@@ -48,10 +51,10 @@
             '<span class="long-name-wrapper">' +
             str.slice(0, str.length - 14) +
             '</span>' +
-            '<span class="long-name-helper">\n' +
+            '<span class="long-name-helper">' +
             '<span class="long-name-helper-i">' +
             str.slice(-14) +
-            '</span>\n' +
+            '</span>' +
             '</span>'
 </script>
 </body>
